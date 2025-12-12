@@ -46,7 +46,7 @@ public class PedidoPlayera {
     }
 
     public boolean estaPagado() {
-        return pagado > precioPlayera;
+        return pagado >= precioPlayera;
     }
 
     public void marcarEntregada() {
