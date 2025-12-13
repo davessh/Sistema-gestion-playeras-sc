@@ -5,9 +5,9 @@ public class Pago {
 
     private double monto;
     private LocalDate fecha;
-    private String metodo;
+    private MetodoPago metodo;
 
-    public Pago(double monto, String metodo) {
+    public Pago(double monto, MetodoPago metodo) {
         this.monto = monto;
         this.metodo = metodo;
         this.fecha = LocalDate.now();
@@ -21,7 +21,18 @@ public class Pago {
         return fecha;
     }
 
-    public String getMetodo() {
+    public MetodoPago getMetodo() {
         return metodo;
+    }
+
+    public void setMonto(double monto) {
+        this.monto = monto;
+    }
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
+
+    public void setMetodo(MetodoPago metodo){
+        this.metodo = metodo;
     }
 }

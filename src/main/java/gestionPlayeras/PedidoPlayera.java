@@ -7,7 +7,7 @@ import java.util.List;
 public class PedidoPlayera {
     private int id;
     private Cliente cliente;
-    private String talla;
+    private Tallas tallas;
     private CortePlayera corte;
     private double precioPlayera;
     private double pagado;
@@ -17,10 +17,11 @@ public class PedidoPlayera {
     private List<Pago> pagos;
     private String notas;
 
-    public PedidoPlayera(int id, Cliente cliente, String talla, CortePlayera corte, double precioPlayera, int edicionPlayera, String notas) {
+    public PedidoPlayera(int id, Cliente cliente, Tallas talla, CortePlayera corte, double precioPlayera, int edicionPlayera, String notas) {
         this.id = id;
         this.cliente = cliente;
-        this.talla = talla;
+        //this.talla = talla;
+        this.tallas = talla;
         this.corte = corte;
         this.precioPlayera = precioPlayera;
         this.edicionPlayera = edicionPlayera;
@@ -32,7 +33,7 @@ public class PedidoPlayera {
         this.pagos = new ArrayList<>();
     }
 
-    public PedidoPlayera(Cliente cliente, String talla, CortePlayera corte, double precioPlayera) {
+    public PedidoPlayera(Cliente cliente, Tallas talla, CortePlayera corte, double precioPlayera) {
         this(0, cliente, talla, corte, precioPlayera, LocalDate.now().getYear(), "");
     }
 
@@ -69,12 +70,12 @@ public class PedidoPlayera {
         this.cliente = cliente;
     }
 
-    public String getTalla() {
-        return talla;
+    public Tallas getTalla() {
+        return tallas;
     }
 
-    public void setTalla(String talla) {
-        this.talla = talla;
+    public void setTalla(Tallas talla) {
+        this.tallas = talla;
     }
     public CortePlayera getCorte() {
         return corte;
@@ -138,9 +139,7 @@ public class PedidoPlayera {
     @Override
 
     public String toString() {
-        return cliente.getNombre() + "(" + talla + " - " + corte + ")";
+        return cliente.getNombre() + "(" + tallas + " - " + corte + ")";
     }
-
-
 
 }
