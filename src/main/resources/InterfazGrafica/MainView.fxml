@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="InterfazGrafica.ControladorInterfaz">
+
+    <center>
+        <TableView fx:id="tablaPedidos">
+
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+                <TableColumn fx:id="colCliente" text="Cliente" prefWidth="180"/>
+                <TableColumn fx:id="colTalla" text="Talla" prefWidth="80"/>
+                <TableColumn fx:id="colCorte" text="Corte" prefWidth="100"/>
+                <TableColumn fx:id="colPagado" text="Pagado" prefWidth="100"/>
+                <TableColumn fx:id="colDeuda" text="Deuda" prefWidth="100"/>
+                <TableColumn fx:id="colEntregada" text="Entregada" prefWidth="100"/>
+            </columns>
+
+        </TableView>
+    </center>
+
+</BorderPane>
